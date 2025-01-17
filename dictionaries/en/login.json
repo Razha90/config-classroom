@@ -1,0 +1,9 @@
+{
+  "language": "English",
+  "welcome": "Welcome",
+  "welcome_greeting":"Please enter your username/email and password to continue.",
+  "or": "or",
+  "login": "Login",
+  "forgot_password": "Forgot password?",
+  "register_account": "Register account"
+}

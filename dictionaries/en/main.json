@@ -1,0 +1,63 @@
+{
+  "plan1": {
+    "title": "WBL Collaborative",
+    "description": "WBL Collaborative is an Online Collaborative Project-Based Learning Application designed to support collaborative learning online, with a project-based learning approach. This application allows students and teachers to work together in a virtual environment, complete challenging tasks, and develop skills such as teamwork, communication, and problem solving."
+  },
+  "plan2": {
+    "title": "E-Learning",
+    "content": [
+      {
+        "title": "Collaborative Discussion",
+        "description": "The collaborative discussion forum facility allows students to interact across departments, ask questions, provide responses, and collaborate on problem solving."
+      },
+      {
+        "title": "Availability of Materials",
+        "description": "Ensuring accessibility of learning materials around the clock, from anywhere. Whether it's videos, e-books, or quizzes, all materials can be accessed at any time that suits the student's needs."
+      },
+      {
+        "title": "Gamification",
+        "description": "Delivering a more fun and motivating learning experience through gamification. Students who actively participate in discussions and complete assignments will be rewarded with badges, levels or rewards."
+      }
+    ]
+  },
+  "plan3": {
+    "title": "Faculties",
+    "content": [
+      {
+        "title": "Faculty of Computer Science",
+        "description": "The Faculty of Computer Science offers programs in Computer Engineering, Information Systems, and Information Technology. The faculty is equipped with state-of-the-art laboratories and experienced faculty members.",
+        "profile": "/img/bg-teknik.jpg"
+      },
+      {
+        "title": "Faculty of Engineering",
+        "description": "The Faculty of Engineering offers programs in Electrical Engineering, Mechanical Engineering, and Civil Engineering. The faculty is equipped with state-of-the-art laboratories and experienced faculty members.",
+        "profile": "/img/bg-teknik.jpg"
+      },
+      {
+        "title": "Faculty of Economics",
+        "description": "The Faculty of Economics offers programs in Management, Accounting, and Development Economics. The faculty is equipped with state-of-the-art laboratories and experienced faculty members.",
+        "profile": "/img/bg-teknik.jpg"
+      }
+    ]
+  },
+  "plan4": {
+    "title": "Courses",
+    "content": [
+      {
+        "title": "Education Information System",
+        "description": "Education Information System is a course that focuses on the development and implementation of information systems in the field of education.",
+        "profile": "/img/bg-teknik.jpg"
+      },
+      {
+        "title": "Information Technology Project Management",
+        "description": "Information Technology Project Management is a course that focuses on the management of information technology projects, including planning, execution, and evaluation.",
+        "profile": "/img/bg-teknik.jpg"
+      },
+      {
+        "title": "Animation Techniques",
+        "description": "Animation Techniques is a course that focuses on the principles and techniques of animation, including 2D and 3D animation.",
+        "profile": "/img/bg-teknik.jpg"
+      }
+    ]
+  }
+}

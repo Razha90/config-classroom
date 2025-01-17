@@ -1,0 +1,22 @@
+{
+  "title": "Formulir Pendaftaran",
+  "description": "Silakan isi formulir pendaftaran berikut ini untuk mendaftar sebagai pengguna baru.",
+  "name": "Nama Lengkap",
+  "email": "Alamat Email",
+  "password": "Kata Sandi",
+  "submit": "Daftar",
+  "password_confirmation": "Konfirmasi Password",
+  "gender": "Pilihan Gender",
+  "boy": "male",
+  "girl": "female",
+  "boy_text":"Laki-laki",
+  "girl_text": "Perempuan",
+  "phone_number": "Nomor Telepon",
+  "name_trim" : "Nama tidak boleh mengandung spasi di awal atau akhir",
+  "name_number" : "Nama tidak boleh mengandung angka",
+  "password_trim": "Password tidak boleh mengandung spasi di awal atau akhir",
+  "password_same": "Password dan Konfirmasi Password harus sama",
+  "email_trim": "Email tidak boleh mengandung spasi di awal atau akhir",
+  "phone_number_trim": "Nomor telepon tidak boleh mengandung spasi di awal atau akhir",
+  "gender_empty": "Pilihan Salah "
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: rgb(249, 244, 244);
+  --primary: rgb(190, 209, 207);
+  --secondary: rgb(16, 14, 14);
+  --accent: rgb(7, 97, 124);
+}
+
+body {
+  color: var(--secondary);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.css-grouped:hover .child {
+  animation-play-state: paused;
+}
+
+.css-overflow-effect {
+  --mask-width: 60px;
+
+  display: flex;
+  --mask-image-content: linear-gradient(
+    to right,
+    transparent,
+    black var(--mask-width),
+    black calc(100% - var(--mask-width)),
+    transparent
+  );
+  --mask-size-content: 100% calc(100% - var(--scrollbar-height));
+  -webkit-mask-image: var(--mask-image-content);
+  -webkit-mask-size: var(--mask-size-content);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0 0;
+
+  mask-image: var(--mask-image-content);
+  mask-size: var(--mask-size-content);
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+}
+
+@layer utilities {
+  .group {
+    will-change: transform;
+    animation: scrolling 10s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

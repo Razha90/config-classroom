@@ -1,0 +1,26 @@
+{
+  "language": "en",
+  "title":"Form Registration",
+  "description" : "Please fill out the following registration form to register as a new user.",
+  "name" : "Full Name",
+  "email" : "Email Address",
+  "password" : "Password",
+  "submit" : "Register",
+  "username":"Username",
+  "password_confirmation":"Confirm Password",
+  "gender":"Choose your gender",
+  "boy":"male",
+  "girl":"female",
+  "boy_text":"Boy",
+  "girl_text": "Girl",
+  "phone_number":"Phone Number",
+  "name_trim" : "Name cannot contain spaces at the beginning or end",
+  "name_number" : "Name cannot contain numbers",
+  "password_trim": "Password cannot contain spaces at the beginning or end",
+  "password_same": "Password and Confirm Password must be the same",
+  "email_trim": "Email cannot contain spaces at the beginning or end",
+  "phone_number_trim": "Phone number cannot contain spaces at the beginning or end",
+  "phone_number_number": "Phone number must be a number",
+  "gender_empty": "Wrong Choice"
+
+}

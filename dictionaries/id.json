@@ -1,0 +1,118 @@
+{
+  "general":{
+    "login": "Masuk",
+    "register": "Daftar"
+  },
+  "main": {
+    "plan1": {
+      "title": "WBL Collaborative",
+      "description": "WBL Collaborative adalah  Aplikasi Pembelajaran Kolaboratif Online Berbasis Proyek yang dirancang untuk mendukung pembelajaran kolaboratif secara online, dengan pendekatan berbasis proyek (project-based learning). Aplikasi ini memungkinkan siswa dan pengajar untuk bekerja sama dalam lingkungan virtual, menyelesaikan tugas-tugas yang menantang, dan mengembangkan keterampilan, seperti kerja tim, komunikasi, dan pemecahan masalah."
+    },
+    "plan2": {
+      "title": "Pembelajaran Online",
+      "content": [
+        {
+          "title": "Kolaborasi Antar Diskusi",
+          "description": "Memungkinkan siswa untuk berdiskusi dengan sesama siswa dan guru. Dengan fitur ini, siswa dapat berbagi pengetahuan, bertanya, dan menjawab pertanyaan dari teman sekelas atau guru."
+        },
+        {
+          "title": "Ketersediaan Materi Pembelajaran",
+          "description": "Materi pembelajaran yang disediakan dalam bentuk teks, gambar, audio, video, dan lainnya. Materi pembelajaran ini dapat diakses oleh siswa kapan saja dan di mana saja."
+        },
+        {
+          "title": "Pengumpulan Tugas",
+          "description": "Siswa dapat mengumpulkan tugas yang diberikan oleh guru. Guru dapat memberikan penilaian dan komentar pada tugas yang dikumpulkan oleh siswa."
+        }
+      ]
+    },
+    "plan3": {
+      "title": "Fakultas",
+      "content": [
+        {
+          "title": "Fakultas Ilmu Komputer",
+          "description": "Fakultas Ilmu Komputer memiliki program studi Teknik Informatika, Sistem Informasi, dan Teknologi Informasi. Fakultas ini memiliki fasilitas laboratorium yang lengkap dan didukung oleh dosen yang berpengalaman di bidangnya.",
+          "profile": "/img/bg-teknik.jpg"
+        },
+        {
+          "title": "Fakultas Teknik",
+          "description": "Fakultas Teknik memiliki program studi Teknik Elektro, Teknik Mesin, dan Teknik Sipil. Fakultas ini memiliki fasilitas laboratorium yang lengkap dan didukung oleh dosen yang berpengalaman di bidangnya.",
+          "profile": "/img/bg-teknik.jpg"
+        },
+        {
+          "title": "Fakultas Ekonomi",
+          "description": "Fakultas Ekonomi memiliki program studi Manajemen, Akuntansi, dan Ekonomi Pembangunan. Fakultas ini memiliki fasilitas laboratorium yang lengkap dan didukung oleh dosen yang berpengalaman di bidangnya.",
+          "profile": "/img/bg-teknik.jpg"
+        }
+      ]
+    },
+    "plan4": {
+      "title": "Kursus",
+      "content":[
+        {
+          "title":"Sistem Informasi Pendidikan",
+          "description":"Sistem Informasi Pendidikan adalah kursus yang berfokus pada pengembangan dan implementasi sistem informasi di bidang pendidikan.",
+          "profile":"/img/bg-teknik.jpg"
+        },
+        {
+          "title":"Manajemen Proyek Teknologi Informasi",
+          "description":"Manajemen Proyek Teknologi Informasi adalah kursus yang berfokus pada manajemen proyek teknologi informasi, termasuk perencanaan, pelaksanaan, dan evaluasi.",
+          "profile":"/img/bg-teknik.jpg"
+        },
+        {
+          "title":"Teknik Animasi",
+          "description":"Teknik Animasi adalah kursus yang berfokus pada prinsip dan teknik animasi, termasuk animasi 2D dan 3D.",
+          "profile":"/img/bg-teknik.jpg"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Hubungi Kami",
+      "content": [
+        {
+          "title": "Alamat",
+          "description": "Jl. Raya Bandung-Sumedang KM. 21, Jatinangor, Sumedang, West Java, Indonesia"
+        },
+        {
+          "title": "Telepon",
+          "description": "(+62) 22 779 4546"
+        },
+        {
+          "title": "Email",
+          "description": "example@kocak.com"
+        }
+      ]
+    },
+    "social": {
+      "title": "Media Sosial",
+      "content": [
+        {
+          "title": "Facebook",
+          "link": "https://www.facebook.com/"
+        },
+        {
+          "title": "Instagram",
+          "link": "https://www.instagram.com/"
+        },
+        {
+          "title": "Twitter",
+          "link": "https://twitter.com/"
+        }
+      ]
+    },
+    "another": {
+      "title": "Lainnya",
+      "content": [
+        {
+          "title": "Kebijakan Privasi",
+          "link": "/privacy"
+        },
+        {
+          "title": "Syarat Layanan",
+          "link": "/terms"
+        }
+      ]
+    }
+  }
+}

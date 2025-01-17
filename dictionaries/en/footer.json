@@ -1,0 +1,49 @@
+{
+  "contact": {
+    "title": "Contact Us",
+    "content": [
+      {
+        "title": "Address",
+        "description": "Jl. Raya Bandung-Sumedang KM. 21, Jatinangor, Sumedang, West Java, Indonesia"
+      },
+      {
+        "title": "Phone",
+        "description": "(+62) 22 779 4546"
+      },
+      {
+        "title": "Email",
+        "description": "example@kocak.com"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social Media",
+    "content": [
+      {
+        "title": "Facebook",
+        "link": "https://www.facebook.com/"
+      },
+      {
+        "title": "Instagram",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "title": "Twitter",
+        "link": "https://twitter.com/"
+      }
+    ]
+  },
+  "another": {
+    "title": "Another",
+    "content": [
+      {
+        "title": "Privacy Policy",
+        "link": "/privacy"
+      },
+      {
+        "title": "Terms of Service",
+        "link": "/terms"
+      }
+    ]
+  }
+}
