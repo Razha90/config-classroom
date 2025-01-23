@@ -1,10 +1,10 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
+// import { getToken } from "next-auth/jwt";
 import { createTokenAPI, verifyTokenAPI } from "./lib/tokenAPI";
-import { cookies, headers } from "next/headers";
-import { auth } from "./auth";
+import { cookies } from "next/headers";
+// import { auth } from "./auth";
 
 const locales = ["id", "en"];
 const defaultLocale = process.env.DEFAULT_LOCALE || "id";
@@ -54,6 +54,7 @@ async function handleAPIPath(request) {
         message: "Error unauthorized user",
         success: false,
         status: 401,
+        code:"UNAUTHORIZED",
         details: "You are not authorized to access this resource.",
       },
       { status: 401 }
@@ -67,28 +68,19 @@ export async function middleware(request) {
   // Get pathname from nextUrl for checking path
   const { pathname } = request.nextUrl;
 
-  if (pathname.startsWith("/user")) {
-    const token = await getToken({
-      req: request,
-      secret: process.env.NEXTAUTH_SECRET,
-    });
+  // if (pathname.startsWith("/user")) {
+  //   const token = await getToken({
+  //     req: request,
+  //     secret: process.env.NEXTAUTH_SECRET,
+  //   });
 
-    if (!token) {
-      const url = request.nextUrl.clone();
-      url.pathname = "/";
-      return NextResponse.redirect(url);
-    }
-    return NextResponse.next();
-  }
-
-  if (pathname.startsWith("/login")) {
-    const session = await auth();
-    if (session) {
-      const url = request.nextUrl.clone();
-      url.pathname = "/";
-      return NextResponse.redirect(url);
-    }
-  }
+  //   if (!token) {
+  //     const url = request.nextUrl.clone();
+  //     url.pathname = "/";
+  //     return NextResponse.redirect(url);
+  //   }
+  //   return NextResponse.next();
+  // }s
 
   if (pathname.startsWith("/api/auth")) {
     return NextResponse.next();
@@ -98,12 +90,15 @@ export async function middleware(request) {
     // Handle API path
     return await handleAPIPath(request);
   }
-
   // Handle UI path
   return handleUiPath(request);
 }
 
 export const config = {
+  // unstable_allowDynamic: [
+  //   '/lib/utilities.js', // allows a single file
+  //   '**/node_modules/function-bind/**', // use a glob to allow anything in the function-bind 3rd party module
+  // ],
   matcher: ["/user", "/((?!assets|.*\\..*|_next).*)"],
 };
 

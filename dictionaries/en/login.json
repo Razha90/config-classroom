@@ -5,5 +5,9 @@
   "or": "or",
   "login": "Login",
   "forgot_password": "Forgot password?",
-  "register_account": "Register account"
+  "register_account": "Register account",
+  "USER_NOT_FOUND": "User not found",
+  "SERVER_ERROR": "Server error",
+  "MISSING_CREDENTIALS": "Missing credentials",
+  "MATCH_ACCOUNT": "Account doesn't match"
 }

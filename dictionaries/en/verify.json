@@ -1,0 +1,11 @@
+{
+  "language": "en",
+  "thanks": "Thanks for verifying your email address!",
+  "personal_info": "Personal Information",
+  "verify_email": "Verify Email",
+  "register_success": "Registration Successful",
+  "empty_token": "Token is empty",
+  "server_error": "Server error",
+  "token_expired": "Token already expired",
+  "success_verified": "Email successfully verified"
+}

@@ -7,7 +7,7 @@ import Main from "../component/template/main";
 import { useState } from "react";
 
 export default function PageControl({
-  generalLanguage,
+  headerLanguage,
   mainLanguage,
   footerLanguage,
   session,
@@ -17,7 +17,7 @@ export default function PageControl({
   return (
     <>
       <Header
-        language={generalLanguage}
+        language={headerLanguage}
         setHeaderHeight={setHeightHeader}
         session={session}
       />

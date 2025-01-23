@@ -1,0 +1,12 @@
+{
+  "language": "ind",
+  "thanks": "Terima kasih telah memverifikasi alamat email Anda!",
+  "personal_info": "Informasi Pribadi",
+  "verify_email": "Verifikasi Email",
+  "register_success": "Pendaftaran Berhasil",
+  "empty_token": "Token kosong",
+  "server_error": "Server bermasalah",
+  "token_expired": "Token sudah kedaluwarsa",
+  "success_verified": "Email berhasil diverifikasi"
+
+}

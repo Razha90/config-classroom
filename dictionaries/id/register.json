@@ -1,4 +1,5 @@
 {
+  "language": "Bahasa Indonesia",
   "title": "Formulir Pendaftaran",
   "description": "Silakan isi formulir pendaftaran berikut ini untuk mendaftar sebagai pengguna baru.",
   "name": "Nama Lengkap",
@@ -18,5 +19,13 @@
   "password_same": "Password dan Konfirmasi Password harus sama",
   "email_trim": "Email tidak boleh mengandung spasi di awal atau akhir",
   "phone_number_trim": "Nomor telepon tidak boleh mengandung spasi di awal atau akhir",
-  "gender_empty": "Pilihan Salah "
+  "gender_empty": "Pilihan Salah",
+  "success_register": "Pendaftaran Berhasil Silakan Periksa Email Anda Untuk Aktivasi Akun.",
+  "continue": "Lanjutkan",
+  "user_exist":"Akun telah terdaftar sebelumnya.",
+  "error_server":"Maaf server bermasalah, silakan coba 5 menit lagi.",
+  "error_registered":"Maaf server bermasalah, gagal mendaftarkan akun. Silakan coba lagi dalam 5 menit.",
+  "error_sending_email":"Maaf server bermasalah, gagal mengirimkan email. Silakan coba lagi dalam 5 menit atau Tukar Email Kamu.",
+  "error_default":"Maaf server bermasalah",
+  "close":"Tutup"
 }

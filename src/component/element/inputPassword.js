@@ -26,6 +26,9 @@ export default function InputPassword() {
           </svg>
         </div>
         <input
+          required
+          minLength={6}
+          maxLength={100}
           type={isPasswordVisible ? "text" : "password"}
           id="password"
           className="bg-background border text-gray-900 text-xl rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"

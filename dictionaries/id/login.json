@@ -1,10 +1,13 @@
 {
   "language": "Indonesia",
   "welcome": "Selamat datang",
-  "welcome_greeting":"Harap masukkan username/email dan kata sandi Anda untuk melanjutkan.",
+  "welcome_greeting": "Harap masukkan username/email dan kata sandi Anda untuk melanjutkan.",
   "or": "atau",
   "login": "Masuk",
   "forgot_password": "Lupa kata sandi?",
-  "register_account": "Daftar akun"
-  
+  "register_account": "Daftar akun",
+  "USER_NOT_FOUND": "Pengguna tidak ditemukan",
+  "SERVER_ERROR": "Terjadi kesalahan pada server",
+  "MISSING_CREDENTIALS": "Kredensial tidak ditemukan",
+  "MATCH_ACCOUNT": "Akun tidak cocok"
 }

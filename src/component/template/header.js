@@ -1,49 +1,39 @@
 "use client";
-
-// import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { signOut } from "next-auth/react";
-
 export default function Header({ language, setHeaderHeight, session }) {
-  // const { data: session } = useSession();
   const [isLogin, setIsLogin] = useState(false);
+  const [isHome, setHome] = useState(false);
   const headerRef = useRef(null);
-
   useEffect(() => {
     const path = window.location.pathname;
     if (path === "/login") {
       setIsLogin(true);
     }
+    if (path === "/") {
+      setHome(false);
+    } else {
+      setHome(true);
+    }
   }, []);
-
   useEffect(() => {
+    console.log(session);
     const handleResize = () => {
       if (headerRef.current) {
-        // Mengambil elemen header untuk menghitung padding dan margin
         const header = headerRef.current;
-
-        // Mengambil nilai offsetHeight (tinggi elemen tanpa padding/margin)
         const height = header.offsetHeight;
-
-        // Mengambil gaya komputasi untuk margin dan padding
         const styles = window.getComputedStyle(header);
-
-        // Mengambil padding dan margin top/bottom
         const paddingTop = parseFloat(styles.paddingTop);
-        // const paddingBottom = parseFloat(styles.paddingBottom);
-
-        // Menambahkan padding dan margin untuk menghitung total tinggi
         const totalHeight = height + paddingTop;
-        // Menyimpan total height ke state
         setHeaderHeight(totalHeight);
       }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [setHeaderHeight]);
   return (
     <header
       ref={headerRef}
@@ -81,15 +71,17 @@ export default function Header({ language, setHeaderHeight, session }) {
         )} */}
         <ul className="list-none p-0 m-0 flex flex-row items-center gap-5">
           <li className="hover:opacity-60">
-            <Link href="/" className="font-bold text-2xl">
-              Home
-            </Link>
+            {isHome && (
+              <Link href="/" className="font-bold text-2xl">
+                Home
+              </Link>
+            )}
           </li>
 
           {session ? (
             <li>
               {/* <Link href="/register">{language.register}</Link> */}
-              <button onClick={() => signOut()}>logout</button>
+              <button onClick={() => signOut()}>{session.user.name}</button>
             </li>
           ) : isLogin ? null : (
             <li className="hover:opacity-60 transition-all">

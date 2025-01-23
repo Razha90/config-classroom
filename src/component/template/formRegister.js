@@ -1,8 +1,5 @@
 "use client";
-import { signIn } from "next-auth/react";
-import Image from "next/image";
-import InputPassword from "../element/inputPassword";
-import Link from "next/link";
+
 import { useState } from "react";
 
 export function SignUp({ language, tokenAPI, isSetRegistered }) {
@@ -135,13 +132,23 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
 
     const responseJson = await response.json();
     console.log(responseJson);
-    if (!responseJson.success) {
-      alert("Gagal mendaftar");
+    // if (!responseJson.success) {
+    if (responseJson.code == "VALIDATION_ERRORS") {
       setIsSubmit(true);
       return;
     }
+    isSetRegistered({
+      code: responseJson.code,
+      email: email,
+    });
+    event.target.reset();
+    setDataPhone("");
     setIsSubmit(true);
-    alert("Berhasil mendaftar");
+    return;
+    // }
+
+    // setIsSubmit(true);
+    // alert("Berhasil mendaftar");
   };
 
   return (
@@ -187,17 +194,21 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                   </svg>
                 </div>
                 <input
+                disabled={isSubmit ? false : true}
+
                   type="text"
                   id="name"
                   required
                   maxLength={100}
                   minLength={7}
-                  className="bg-background border  text-xl rounded-2xl text-secondary block w-full ps-10 p-2.5"
+                  className={`bg-background border text-xl rounded-2xl text-secondary block w-full ps-10 p-2.5 ${
+                    isError.name.condition && "border-red-500"
+                  }`}
                   placeholder="Rahma Contoh"
                   name="name"
                 />
                 {isError.name.condition && (
-                  <p className="mt-2 text-sm text-red-600 dark:text-red-500">
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-500 absolute top-[42px]">
                     {isError.name.message}
                   </p>
                 )}
@@ -235,17 +246,21 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                   </svg>
                 </div>
                 <input
+                disabled={isSubmit ? false : true}
+
                   type="email"
                   id="email"
                   required
                   maxLength={100}
                   minLength={7}
-                  className="bg-background border text-secondary text-xl rounded-2xl  block w-full ps-10 p-2.5"
+                  className={`bg-background border text-xl rounded-2xl text-secondary block w-full ps-10 p-2.5 ${
+                    isError.email.condition && "border-red-500"
+                  }`}
                   placeholder="Examplle.dsd@email.com"
                   name="email"
                 />
                 {isError.email.condition && (
-                  <p className="mt-2 text-sm text-red-600 dark:text-red-500">
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-500 absolute top-[42px]">
                     {isError.email.message}
                   </p>
                 )}
@@ -260,17 +275,25 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                   <p className="opacity-70 text-sm">+62</p>
                 </div>
                 <input
+                disabled={isSubmit ? false : true}
                   type="text"
                   maxLength={15}
                   minLength={5}
                   required
                   id="phone"
-                  className="bg-background border text-secondary text-xl rounded-2xl  block w-full ps-10 p-2.5"
                   placeholder="0812....."
                   name="phone"
                   onChange={handlePhoneChange}
-                  defaultValue={dataPhone}
+                  value={dataPhone}
+                  className={`bg-background border text-xl rounded-xl text-secondary block w-full ps-10 p-2.5 ${
+                    isError.phone.condition && "border-red-500"
+                  }`}
                 />
+                {isError.phone.condition && (
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-500 absolute top-[42px]">
+                    {isError.phone.message}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -323,14 +346,23 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                   </svg>
                 </div>
                 <input
+                disabled={isSubmit ? false : true}
+
                   type="password"
                   maxLength={100}
                   minLength={7}
                   required
                   id="password"
-                  className="bg-background border text-secondary text-xl rounded-2xl   block w-full ps-10 p-2.5"
+                  className={`bg-background border text-xl rounded-xl text-secondary block w-full ps-10 p-2.5 ${
+                    isError.password.condition && "border-red-500"
+                  }`}
                   name="password"
                 />
+                {isError.password.condition && (
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-500 absolute top-[42px]">
+                    {isError.password.message}
+                  </p>
+                )}
               </div>
             </div>
             <div className="flex flex-col gap-1">
@@ -366,12 +398,16 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                   </svg>
                 </div>
                 <input
+                disabled={isSubmit ? false : true}
+
                   type="password"
                   maxLength={100}
                   minLength={7}
                   required
                   id="confirm_password"
-                  className="bg-background border text-secondary text-xl rounded-2xl  block w-full ps-10 p-2.5"
+                  className={`bg-background border text-xl rounded-xl text-secondary block w-full ps-10 p-2.5 ${
+                    isError.password.condition && "border-red-500"
+                  }`}
                   name="confirm_password"
                 />
               </div>
@@ -381,8 +417,11 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
                 {language.gender}
               </label>
               <select
+              disabled={isSubmit ? false : true}
                 id="gender"
-                className="bg-background border border-gray-300 w-[100%] p-3 rounded-2xl font-inter text-lg text-secondary"
+                className={`bg-background border w-[100%] p-3 rounded-2xl font-inter text-lg text-secondary ${
+                  isError.gender.condition && "border-red-500"
+                }`}
                 name="gender"
                 required
                 defaultValue={""}
@@ -399,7 +438,9 @@ export function SignUp({ language, tokenAPI, isSetRegistered }) {
         <div className="flex justify-end mt-6">
           <button
             type="submit"
-            className={`bg-accent text-background py-3 w-[150px] rounded-2xl cursor-pointer hover:opacity-70 transition-all font-inter text-lg self-end flex justify-center ${!isSubmit && "opacity-50"}`}
+            className={`bg-accent text-background py-3 w-[150px] rounded-2xl cursor-pointer hover:opacity-70 transition-all font-inter text-lg self-end flex justify-center ${
+              !isSubmit && "opacity-50"
+            }`}
           >
             {isSubmit ? (
               language.submit

@@ -21,6 +21,15 @@
   "email_trim": "Email cannot contain spaces at the beginning or end",
   "phone_number_trim": "Phone number cannot contain spaces at the beginning or end",
   "phone_number_number": "Phone number must be a number",
-  "gender_empty": "Wrong Choice"
+  "gender_empty": "Wrong Choice",
+  "success_register": "Registration Successful Please Check Your Email To Activate Your Account.",
+  "continue": "Continue",
+  "user_exist":"Account Already Exist.",
+  "error_server":"Sory Proble Server, Try again in 5 minute.",
+  "error_registered":"Sory Problem in Server, Error Register. Try again in 5 minute.",
+  "error_sending_email":"Sory Problem in Server, Error sending Email. Try again in 5 minute or Change your Email.",
+  "error_default":"Sory Problem in server",
+  "close":"Closed"
+
 
 }

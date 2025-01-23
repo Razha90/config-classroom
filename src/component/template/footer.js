@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer({ language }) {
   return (
-    <footer className="bg-primary font-inter flex justify-between gap-4 px-[12%] align-top mt-[100px] text-accent py-[2%] transition-all sm-375:px-[1%] xl-768:flex-wrap xl-768:gap-4 xl-768:justify-start sm-375:justify-center">
+    <footer className="bg-primary font-inter flex justify-between gap-4 px-[12%] align-top mt-[100px] text-accent py-[2%] transition-all sm-375:px-[1%] xl-768:flex-wrap xl-768:gap-4 xl-768:justify-start sm-375:justify-center animate-fade-down">
       <div>
         <Link
           href="/"
